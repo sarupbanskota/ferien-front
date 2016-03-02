@@ -12,7 +12,7 @@ export default Ember.Controller.extend(LoginControllerMixin, {
         identification,
         password
       ).catch((reason) => {
-        this.set('errorMessage', reason.error);
+        this.notify.alert(reason.error);
       });
     }
   }
