@@ -34,6 +34,11 @@ Make use of the many generators for code, try `ember help generate` for more det
 * `ember test`
 * `ember test --server`
 
+## Trying it out:
+
+* Run the backend project at port 3000
+* Frontend: `ember server --proxy http://0.0.0.0:3000`
+
 ### Building
 
 * `ember build` (development)
