@@ -6,11 +6,12 @@ export default Ember.Controller.extend(LoginControllerMixin, {
 
   actions: {
     authenticate: function() {
-      let { identification, password } = this.getProperties('identification', 'password');
+      var credentials = this.getProperties(
+        'identification', 'password'
+      );
       return this.get('session').authenticate(
         'simple-auth-authenticator:devise',
-        identification,
-        password
+        credentials
       ).catch((reason) => {
         this.notify.alert(reason.error);
       });

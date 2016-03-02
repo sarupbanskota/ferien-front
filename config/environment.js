@@ -27,7 +27,9 @@ module.exports = function(environment) {
   };
 
   ENV['simple-auth-devise'] = {
-    serverTokenEndpoint: 'http://localhost:3000/api/v1/users/signin.json'
+    serverTokenEndpoint: 'http://localhost:3000/api/v1/users/signin.json',
+    tokenAttributeName: 'token',
+    identificationAttributeName: 'email'
   };
 
   if (environment === 'development') {

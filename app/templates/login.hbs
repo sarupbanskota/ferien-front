@@ -1,10 +1,17 @@
 <div class="text-center">
-  <form {{action 'authenticate' on='submit'}}>
-    <label for='identification'>Login</label>
-    {{input id='identification' placeholder='Enter Login' value=identification}}
-    <label for='password'>Password</label>
-    {{input id='password' placeholder='Enter Password' type='password' value=password}}
-    <button type='submit' class="btn btn-primary">Login</button>
+  <form {{action "authenticate" on="submit"}}>
+    <div>
+      <label for="identification">E-mail</label><br />
+      {{input value=identification placeholder="E-mail" type="text" name="email"}}
+    </div>
+
+    <div>
+      <label for="password">Password</label><br />
+      {{input value=password placeholder="Password" type="password" name="password"}}
+    </div>
+
+    <div>
+      <button type="submit">Log in</button>
+    </div>
   </form>
 </div>
-
