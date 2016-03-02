@@ -1,4 +1,12 @@
 <div class="text-center">
+  <div class="row">
+    {{#if errorMessage}}
+      {{#bs-alert type="success"}}
+        {{errorMessage}}
+      {{/bs-alert}}
+    {{/if}}
+  </div>
+
   <form {{action 'authenticate' on='submit'}}>
     <label for='identification'>Login</label>
     {{input id='identification' placeholder='Enter Login' value=identification}}
@@ -7,3 +15,4 @@
     <button type='submit' class="btn btn-primary">Login</button>
   </form>
 </div>
+

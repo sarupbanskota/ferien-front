@@ -16,11 +16,18 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+    contentSecurityPolicy: {
+      'connect-src': "*"
     }
   };
 
   ENV['simple-auth'] = {
     authorizer: 'simple-auth-authorizer:devise'
+  };
+
+  ENV['simple-auth-devise'] = {
+    serverTokenEndpoint: 'http://localhost:3000/api/v1/users/signin.json'
   };
 
   if (environment === 'development') {
